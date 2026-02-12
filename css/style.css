@@ -2,37 +2,53 @@
 
 /*Write selector/rule property to add your border when
 links in the navigation are in the hover or focus state.*/
-nav a:hover,
-nav a:focus {border-style: dotted; border-width: 2px; border-color: #800000;}
-.skip a {position: absolute; top: -65px;}
-.skip a:focus {top: -25px;}
+nav a:hover, nav a:focus {border-style: dotted; border-width: 2px; border-color: #800000;}
+
+
 
 /*Write selector/rule property to position the default position for the skip class element*/
+.skip a {position: absolute; top: -65px;}
 
 
 /*Write selector/rule property to position the skip class element when it is in focus*/
+.skip a:focus {position: absolute; top: 25px; border-style: dashed; border-width: 5px; border-color: #008000}
 
 /*Write selector/rule property to style all elements when in focus*/
 
-
-
 /*Write selector/rule property to style the container */
 
-
 /*Write selector/rule property to add the background image to the first div in the grid and place it in the grid. */
+main div:first-child {grid-column: 1 /-1; background-image: url('../images/header.jpg'); background-repeat: no-repeat;}
 
 
 /* Steps 6 and 7: Write the selector/rule properties to  place the next five elements in the next
  five rows in the grid. */
+.accounts, .onlinebanking, .security, .loans, .contact {grid-column:2/5}
+.accounts-image, .accounts{grid-row: 2/3;}
+.onlinebanking-image, .onlinebanking{grid-row: 3/4;}
+.security-image,.security{grid-row: 4/5;}
+.loans-image, .loans{grid-row: 5/6;}
+.contact-image, .contact{grid-row: 6/7;}
+.accounts-image, .onlinebanking-image, .security-image, .loans-image, .contact-image {max-height: 675px; grid-column: 1/-1; }
+.container img {width: 100%; height: 100%}
 
-      /*This will be a lot of rules.... but be strategic and combine selectors*/
+.text-block {justify-content: center; align-items: center; text-align: center;}
+.text-block li {text-align: left;}    /*This will be a lot of rules.... but be strategic and combine selectors*/
 
 
  /* Step 8: Write the selector/rule property to style the .text-block class. */
 
 
 /* Add your media query here */
-
+@media screen  and (min-width: 825px){
+     .nav{text-align: right; padding: 35px 0px}
+.container {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; column-gap: 13px; row-gap: 13px; align-items: center;}
+.accounts, .security, .contact {grid-column: 4/7}
+.onlinebanking, .loans {grid-column: 2/5}
+.accounts-image, .security-image, .contact-image {grid-column: 1/4}
+.onlinebanking-image, .loans-image {grid-column: 3/8}
+.text-block {max-height: 235px;}
+}
 
   /* Step 10: Write the selector/rule property to style the nav element */
 
