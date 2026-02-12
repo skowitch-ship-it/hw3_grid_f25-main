@@ -47,7 +47,7 @@ main div:first-child {grid-column: 1 /-1; background-image: url('../images/heade
 .onlinebanking, .loans {grid-column: 2/5}
 .accounts-image, .security-image, .contact-image {grid-column: 1/4}
 .onlinebanking-image, .loans-image {grid-column: 3/8}
-.text-block {max-height: 235px;}
+.text-block {max-height: 235px; overflow: auto;}
 }
 
   /* Step 10: Write the selector/rule property to style the nav element */
